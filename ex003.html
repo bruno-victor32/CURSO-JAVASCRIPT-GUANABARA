@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(130, 130, 202);
+            color: white;
+            font:normal 20pt Arial;
+        }
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá,Mundo!</h1>
+    <p> Já me livrei da maldição</p>
+    <script>//O trecho de javascript inicia aqui
+        var n1 =Number( window.prompt ('Digite um número:'))//os numeros devido a caracteristica do comando ficam string e não number
+        var n2 = Number( window.prompt ('Digite outro número:'))//os numeros devido a caracteristica do comando ficam string e não number
+        //basicamente o que estou fazendo e o seguinte antes de jogar dentro de "n1 e n2", converter ele para inteiro utilizando o Number.parseInt
+        var soma = n1 + n2
+        window.alert(`A soma entre ${n1} + ${n2} é igual a ${soma} `)
+        //(number + number) para adição
+        //string + string para concatenação
+    </script> 
+</body>
+</html>

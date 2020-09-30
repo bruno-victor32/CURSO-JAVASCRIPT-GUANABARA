@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <!--<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        body {
+            background-color: rgb(101, 60, 196);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(65, 50, 197, 0.76);
+            border-radius: 20px;
+            box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.39);
+        }
+
+        .input {
+            border: 2px solid rgba(223, 223, 223, 0.548);
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+
+        input {
+            height: 40px;
+            width: 300px;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 18pt;
+            margin: 0 20px;
+        }
+
+        .box p {
+            font-size: 16pt;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: rgb(194, 235, 11);
+            color: black;
+            transition: .2s;
+        }
+
+        button:hover {
+            box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.322);
+            background-color: rgba(221, 26, 26, 0.795);
+            transform: translateY(-2px);
+            color: rgb(255, 255, 255);
+        }
+    </style>-->
+</head>
+
+<body>
+    <div class="box">
+        <p id="res">País de Origem</p>
+        <div class="input">
+            <input type="text" id="pais">
+        </div>
+        <button onclick="pais()">Analizar</button>
+    </div>
+    <script>
+        function pais() {
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('p#res')
+            var value = String(pais.value.toUpperCase())
+            if (value == "BRASIL" || value == "BR") {
+                res.innerHTML = `<p>Você é Brasileiro</p>`
+            } else {
+                res.innerHTML = `<p>Você é Estrangeiro</p>`
+            }
+        }
+
+    </script>
+</body>
+
+</html>

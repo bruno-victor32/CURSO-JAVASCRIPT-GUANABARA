@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verificador de Idade</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <header>
+            <h1>Verificador de Idade</h1>
+        </header>
+        <section>
+        <div>
+        <p>Ano de Nascimento:
+            <input type="number" name = "txtano" id="txtano" min="0"> <!--txtano e o ID da minha caixa de texto nascimento!-->
+        </p>
+        <p>Sexo:
+        <input type="radio" name="radsex" id="mas" checked> <!--O radsex ou seja o name tem que ser igual com o de baixo si não for da problema ou seja vai marcar os dois masculino e feminino!-->
+        <label for="mas">Masculino</label>
+        <input type="radio" name="radsex" id="fem"><!--Aqui e a bolinha de escolher homem e mulher!,não coloquei checked porque só um poder ser checked-->
+        <label for="fem">Feminino</label><!--O atributo for faz um tipo de link entre a label e o input. Logo o for tem que apontar para o ID do input.!-->
+        </p>
+        <p>
+        <input type="button" value="Verificar" onclick="verificar()"><!-- Colocamos o onclick para disparar o javascript,então tenho um metodo chamado verificar,quando eu clicar no botão Verificar vai disparar um evento chamado verificar.Para fazer isso eu vou no js e vou colocar function verificar(){!-->
+        </p>
+        </div>
+        <div id = "res"> <!--id resultado!-->
+            Preencha os dados acima para ver o resultado!
+            <!--<img id='foto'>  aqui e como seria para criar um id no html,fiz isso dinamicamente usando javascript !-->
+        </div>
+        </section>
+        <footer>
+        <p>&copy; CursoemVideo</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

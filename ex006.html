@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title><!--A tag <title> é obrigatório em todos os documentos HTML e define o título do documento.-->
+    <style>/*A tag <style> é usado para definir as informações de estilo para um documento HTML.*/
+        div#area{
+            font: normal 20pt arial;/*A tag <div> define uma divisão ou uma seção em um documento HTML.*/
+            background: green;/*cor de fundo*/
+            color:white;/*cor das letras*/
+            width: 200px;/*largura*/
+            height:200px;/*altura*/
+            line-height:200px;/*propriedade especifica a altura de uma linha.*/
+            text-align: center;/*A text-alignpropriedade especifica o alinhamento horizontal do texto em um elemento.*/
+        }
+    </style>
+</head>
+<body>
+    <div id = "area" >
+   <!--<div id = "area" onclick="clicar()" onmouseenter ="entrar()" onmouseout="sair()">  Quando eu clicar em cima da div ele vai disparar o clicar-->
+        interaja...
+    </div>
+    <script>
+
+       var a =window.document.getElementById('area')  //Isso aqui window.document.getElementById('area') faz uma ligação do objeto "a" do javascript com o elemento de id "area" que está dentro do html quando eu coloco do lado de fora  essa linha de cima ela serve para todas as function
+        
+        a.addEventListener('click',clicar)//O método addEventListener () atribui um processador de eventos para o elemento especificado.
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout',sair)
+
+        function clicar(){
+            //Si eu colocar aquela linha aqui dentro só serve para essa function
+        a.innerText = 'Clicou!'//e esse objeto vai mudar o conteudo dele para clicou,esse clicou só vai aconteçer quando efetivamente clicar em cima do elemento
+        a.style.background = 'red'//quando eu clicar vai ficar vermelho
+        }    
+        function entrar(){
+            a.innerText = 'Entrou!'
+        }    
+        function sair(){
+            a.innerText = 'Sair!'
+            a.style.background = 'green'//depois que eu clicar e sair vai voltar a ser vermelho
+        }    
+    </script><!--Javascript-->
+</body>
+</html>
+<!--O evento onclick ocorre quando o usuário clica em um elemento,nesse caso na div.-->
+<!--O evento OnMouseEnter ocorre quando o cursor do rato é movido para um elemento.-->

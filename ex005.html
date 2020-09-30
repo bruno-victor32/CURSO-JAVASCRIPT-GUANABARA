@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(73, 73, 185);/*cor de fundo*/
+            color :white; /*cor da letra*/
+            font: normal 18pt Arial;/*tamanho da fonte*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div class = "msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]/*criei uma variavel chamada p1 para selecionar meus paragrafos eu utilizo window.document ou simplesmente document em seguida coloco getElementsByTagName entre parentes e aspas vou colocar a tag que quero selecionar que nesse caso e a tag p,só que ele n vai pegar um elemento só,nesse caso eu tenho dos paragrafos <p> para selecionar o primeiro paragrafo eu [] e coloco 0 vai indicar que e o primeiro paragrafo que apareçer caso eu queira selecionar o segundo coloco 1 e sucessivamente*/
+        /*window.document.write ('Esta escrito assim:' + p1.innerText)*//*vou escrever na tela o P1,innerText e o texto que está dentro do primeiro paragrafo*/
+        /*corpo.style.background ='black'*/ /*Muda a cor de fundo*/
+        /*p1.style.color = 'yellow'*//*Muda a cor da letra do primeiro paragrafo*/
+       /* document.write(p1.innerHTML) */ /*a diferenaça do innerHTML para innerText e que o innerHTML traz junto a formatação ou sejá traz o comando inteiro juntamento com a formatação*/  
+       /*window.alert (p1.innerText)*/ /*O innerText pega o texto sem formatação  já o innerHtml pega o html inteiro inclusive com a formatação*/
+       /*var d = window.document.getElementById('msg')*//*para selecionar a div pelo  id dela*/
+       /*d.style.background = 'green' *//*minha div vai ficar  verde*/
+       /*d.innerText = 'Estou aguardando...'*//*Dentro da div originalmente está clique em mim,só que estou modificando por javascript usando dom o innerText 'Estou aguardando'*/
+      /* window.document.getElementById('msg').innerText = 'Ola!'*/
+      var d = window.document.querySelector('div.msg')
+      d.style.color = 'blue'
+       </script>
+    
+</body>
+</html>

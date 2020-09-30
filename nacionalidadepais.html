@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País de Origem</title>
+</head>
+
+<body>
+    <h1>Sistema de classificação de nacionalidade</h1>
+    Aonde voçê nasçeu: <input type="text" name="pais" id="pais">?
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="resposta"> </div>
+    <script>
+        function verificar() {
+            var txtv = window.document.querySelector("Input#pais")
+            var res = window.document.querySelector("div#res")
+            var nacionalidadee = String(txtv.value)
+            resposta.innerHTML = ` Sua Origem e ${nacionalidadee}?`
+            if (nacionalidadee == "Brasil" || nacionalidadee == "BRASIL" || nacionalidadee == "brasil") {
+                resposta.innerHTML += `<p>Voçê é <strong>BRASILEIRO</strong>`
+            } else {
+                resposta.innerHTML = `Você e  estrangeiro`
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
